@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container{
+        display: grid;
+        grid-template-areas:
+            'header header header'
+            'content content content'
+            'footer footer footer';
+        grid-gap: 10px;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        width: 100%;
+        height: 100vh;
+        display: contents;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .content{
+    grid-area: content;
+    z-index: 1;
+    background-color: rgba(21, 28, 34, 0.466);
+    padding: 10px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 5px solid rgb(211, 206, 206);
+    border-radius: 10px;
+}
+
+.container .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: aliceblue;
+    text-align: justify;
+}
+
+.container .content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: aliceblue;
+    text-align: center;
+}
+
+.container .content h3{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 2.5em;
+    color: rgba(243, 27, 27, 0.936);
+
+}
+
+.container .content img{
+    margin: 5px;
+    padding: 0px;
+    height: 180px;
+    width: 180px;
+    position: relative;
+    background-color: black;
+    border: 5px solid white;
+
+}
+
+.container .header a{
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+    color: rgba(240, 248, 255, 0.808);
+}
+
+.container .header{
+    grid-area: header;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(21, 28, 34, 0.466);
+    padding: 10px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 5px solid rgb(211, 206, 206);
+    border-radius: 10px;
+}
+
+.container .header h1{
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: aliceblue;
+    text-align: center;
+}
+
+.container .content p{
+    font-size: 1.1em;
+    padding: auto;
+    color: aliceblue;
+    text-align: justify;
+}
+
+.container .footer{
+    grid-area: footer;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+
+}
+
+.container .footer h1{
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.container .footer p{
+    font-size: 15px;
+    color: rgba(240, 248, 255, 0.47);
+}
+
+.container .footer a{
+    margin: 10px;
+    font-size: 18px;
+    color: rgba(240, 248, 255, 0.808);
+}

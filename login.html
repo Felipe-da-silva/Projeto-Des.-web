@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta é uma página de exemplo com CSS externo.">
+    <link rel="stylesheet" href="/Wiki/CSS/login.css">
+    <title>WiKi OvEr LoRd</title>
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay muted loop>
+            <source src="/Wiki/video/login.mp4" type="video/mp4">
+        </video>
+        <div class="header">
+            <h1>Registre-se</h1>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="Sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome"><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade">
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br>
+            <label for="Sexo">Sexo:</label>
+            <input type="radio" name="sexo" value="masculino"> <small>Masculino</small>
+            <input type="radio" name="sexo" value="feminino"><small>Feminino</small><br>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco"><br>
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+                <option value="aw">Alemanha</option>
+                <option value="br">Brasil</option>
+                <option value="us">Estados Unidos</option>
+                <option value="pt">Portugal</option>
+                <option value="ca">Canadá</option>
+                <option value="ua">Ucrânia</option>
+                <option value="vn">Vietnã</option>
+            </select>
+            <h4>Comentário:</h4>
+            <label for="descricao">Comente:</label><br>
+            <textarea name="descricao" id="descricao"></textarea><br>
+            <h4>Digite seu email e senha:</h4>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha"><br>
+
+            <form id="mform">
+                <p><button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </p>
+            </form>
+            <p id="mensagem"></p>
+        </div>
+
+        <script>
+            var formulario = document.getElementById("mform");
+            var mensagem = document.getElementById("mensagem");
+
+            formulario.addEventListener("submit", function(evento) {
+                evento.preventDefault();
+                var nome = document.getElementById("nome").ariaValueMax;
+                var sobrenome = document.getElementById("sobrenome").ariaValueMax;
+
+                mensagem.innerText = "Olá, " + nome + sobrenome + "! O formuário foi enviado com sucesso";
+            })
+        </script>
+
+        <div class="footer">
+            <h1>
+                &copy; 2024 Meu site. Todos os direitos reservados.</h1>
+            <a href="/Wiki/inicial.html">Tela Inicial</a></li>
+            <a href="/Wiki/index.html">Sobre</a></li>
+
+        </div>
+    </div>
+</body>
+
+</html>
